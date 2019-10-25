@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COMP229-F2019-Midterm", "COMP229-F2019-Midterm\COMP229-F2019-Midterm.csproj", "{FDD791CA-1622-44D0-A614-6F470B298F97}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDD791CA-1622-44D0-A614-6F470B298F97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDD791CA-1622-44D0-A614-6F470B298F97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDD791CA-1622-44D0-A614-6F470B298F97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDD791CA-1622-44D0-A614-6F470B298F97}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C264164C-485D-47E2-8C23-1FA18D4DAB93}
+	EndGlobalSection
+EndGlobal
