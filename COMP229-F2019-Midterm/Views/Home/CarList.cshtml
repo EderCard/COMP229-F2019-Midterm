@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Car>
+@{
+    ViewBag.Title = "Car List";
+}
+<br />
+<h2>Registered Cars List</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <td>License Plate</td>
+            <td>Owner's Name</td>
+            <td>Owner's Address</td>
+            <td>Make</td>
+            <td>Model</td>
+            <td>4 door</td>
+            <td>Ethanol</td>
+            <td>4WD</td>
+            <td>Registration Date</td>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (Car p in Model)
+        {
+        <tr>
+            <td>@p.LicensePlate</td>
+            <td>@p.OwnerName</td>
+            <td>@p.OwnerAddress</td>
+            <td>
+                @switch (p.Make)
+                {
+                    case 1:
+                        @: Honda
+                        break;
+                    case 2:
+                        @: Toyota
+                        break;
+                    case 3:
+                        @: Volvo
+                        break;
+                    case 4:
+                        @: Lexus
+                        break;
+                }
+            </td>
+            <td>@p.Model</td>
+            <td>
+                @(p.HasFourDoor ? "Yes" : "No")
+            </td>
+            <td>
+                @(p.HasEthanol ? "Yes" : "No")
+            </td>
+            <td>
+                @(p.HasFourWheelDrive ? "Yes" : "No")
+            </td>
+            <td>@p.RegistrationDate</td>
+        </tr>
+        }
+    </tbody>
+
+</table>

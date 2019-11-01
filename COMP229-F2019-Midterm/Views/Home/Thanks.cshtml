@@ -1,0 +1,23 @@
+﻿@model Car
+@{
+    ViewBag.Title = "Thanks";
+}
+
+<h2>Thank You!</h2>
+<p><strong>@Model.Model</strong> belongs to <strong>@Model.OwnerName</strong> has been succcessfully registered as <strong>
+    @switch (Model.Make)
+    {
+        case 1:
+            @: Honda
+            break;
+        case 2:
+            @: Toyota
+            break;
+        case 3:
+            @: Volvo
+            break;
+        case 4:
+            @: Lexus
+            break;
+    }
+</strong> on <strong>@Model.RegistrationDate</strong></p>

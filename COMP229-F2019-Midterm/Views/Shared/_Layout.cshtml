@@ -7,8 +7,24 @@
     <link rel="stylesheet" href="/css/StyleSheet.css" />
 </head>
 <body>
-    <div>
+    <div id="allPage">
+        <header>
+            <table>
+                <tr>
+                    <td><h1>Car Repair System</h1></td>
+                    <td><img src="/images/logo.jpg" class="logo" /></td>
+                </tr>
+            </table>
+            <a asp-action="Index">Home</a>
+            <a asp-action="CarRegistrationForm">Add Car</a>
+            <a asp-action="CarList">Car List</a>
+        </header>
         @RenderBody()
+        <footer>
+            <p id="copyright">
+                &copy;&nbsp;&nbsp;Copyright Ederson Cardoso - Comp229 - Fall 2019 - Midterm
+            </p>
+        </footer>
     </div>
 </body>
 </html>

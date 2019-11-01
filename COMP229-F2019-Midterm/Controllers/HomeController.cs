@@ -14,5 +14,41 @@ namespace COMP229_F2019_Midterm.Controllers
         {
             return View();
         }
+        /// <summary>
+        /// This method returns CarRegistrationForm view (GET)
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public ViewResult CarRegistrationForm()
+        {
+            return View();
+        }
+        /// <summary>
+        /// This method is used to save the new car into the CarList (POST)
+        /// </summary>
+        /// <param name="patient"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public ViewResult CarRegistrationForm(Car car)
+        {
+            if (ModelState.IsValid)
+            {
+                Repository.AddCar(car);
+                return View("Thanks", car);
+            }
+            else
+            {
+                return View();
+            }
+        }
+        /// <summary>
+        /// This method returns CarList view
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public ViewResult CarList()
+        {
+            return View(Repository.CarList.OrderBy(c => c.OwnerName));
+        }
     }
 }

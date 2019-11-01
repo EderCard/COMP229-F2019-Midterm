@@ -1,0 +1,56 @@
+﻿@model Car
+@{
+    ViewBag.Title = "Car Registration Form";
+}
+<h2>Car Registration Form</h2>
+
+<form asp-action="CarRegistrationForm" method="post">
+    <table>
+        <tr>
+            <td><label asp-for="LicensePlate">License Plate:</label></td>
+            <td><input asp-for="LicensePlate" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="OwnerName">Owner's Name:</label></td>
+            <td><input asp-for="OwnerName" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="OwnerAddress">Owner's Address:</label></td>
+            <td><input asp-for="OwnerAddress" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Make">Make:</label></td>
+            <td>
+                <select asp-for="Make">
+                    <option value="">Choose an option</option>
+                    <option value="1">Honda</option>
+                    <option value="2">Toyota</option>
+                    <option value="3">Volvo</option>
+                    <option value="4">Lexus</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label asp-for="Model">Model:</label></td>
+            <td><input asp-for="Model" /></td>
+        </tr>
+        <tr>
+            <table>
+                <tr>
+                    <td> Aditional features:</td>
+                    <td><input type="checkbox" asp-for="HasFourDoor" /><label asp-for="HasFourDoor">4 door</label></td>
+                    <td><input type="checkbox" asp-for="HasEthanol" /><label asp-for="HasEthanol">Ethanol</label></td>
+                    <td><input type="checkbox" asp-for="HasFourWheelDrive" /><label asp-for="HasFourWheelDrive">4WD</label></td>
+                </tr>
+            </table>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><button type="submit">Register</button>&nbsp;&nbsp;&nbsp;&nbsp;<button type="reset">Cancel</button></td>
+            <td></td>
+        </tr>
+    </table>
+</form>
